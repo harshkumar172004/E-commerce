@@ -74,17 +74,14 @@ const Header = () => {
                         <button type='button' onClick={() => setshowSearch(!showSearch)}><IoIosSearch className='text-gray-500 hover:text-primary cursor-pointer' size={25} /></button>
                         <Cart />
 
-                        {!auth
-                            ?
-                            <Link href={WEBSITE_LOGIN}><VscAccount className='text-gray-500 hover:text-primary cursor-pointer' size={25} /></Link>
-                            :
+                       
                             <Link href={USER_DASHBOARD}>
                                 <Avatar>
                                     <AvatarImage src={auth?.avatar?.url || adminlogo.src} />
                                 </Avatar>
                             </Link>
 
-                        }
+                        
 
                         <button type='button' className='lg:hidden block' onClick={() => setIsMobileMenu(true)}>
                             <HiMiniBars3 size={25} className='text-gray-500 hover:text-primary' />
